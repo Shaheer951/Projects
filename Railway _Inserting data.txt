@@ -1,0 +1,54 @@
+CREATE TABLE Users(U_id int primary KEY,CNIC numeric,Name varchar(15),Email varchar(20),Gender varchar(10),Age int);
+
+CREATE TABLE Passenger(P_id int primary KEY,CNIC numeric,Name varchar(15),Gender varchar(10),Age int);
+
+CREATE TABLE Train(Train_id int PRIMARY KEY,Name varchar(10));
+
+CREATE TABLE Coach(C_id int PRIMARY key,Class varchar(16),Train_id int not null,FOREIGN key(Train_id)REFERENCES train(Train_id));
+
+CREATE TABLE Seat(S_no int PRIMARY KEY,Status varchar(15),Price int,C_id int not null,FOREIGN KEY(C_id)REFERENCES coach(C_id));
+
+CREATE TABLE payment(Pay_id int PRIMARY KEY,Source varchar(16),U_id int not null,FOREIGN KEY(U_id)REFERENCES users(U_id));
+
+CREATE TABLE Reserve(R_id int PRIMARY KEY,U_id int not null,P_id int not null,T_Id int not null,S_no int not null,Date date,Time Time,FOREIGN KEY(U_id)REFERENCES users(U_id),FOREIGN KEY(P_id)REFERENCES passenger(P_id),FOREIGN KEY(S_no)REFERENCES Seat(S_no));
+
+CREATE TABLE Ticket(T_id int PRIMARY KEY,Type varchar(10),U_id int not null,Pay_id int not null,C_id int NOT null,FOREIGN key(U_id)REFERENCES users (U_id),FOREIGN key(Pay_id)REFERENCES payment (Pay_id),FOREIGN key(C_id)REFERENCES coach(C_id));
+
+CREATE TABLE Train_Status(TS_id int,Train_id int,Avail int,Booked int,Waited int,FOREIGN KEY (Train_id)REFERENCES train(Train_id),PRIMARY KEY(TS_id,Train_id));
+
+CREATE TABLE Route(R_id int PRIMARY KEY,Name varchar(15),Distance int);
+
+CREATE TABLE Station(S_id int PRIMARY KEY,Name varchar(16),City Varchar(20));
+
+CREATE TABLE User_T_Status(Train_id int,U_id int,TS_id int,FOREIGN KEY(Train_id)REFERENCES train(Train_id),FOREIGN KEY(U_id)REFERENCES users(U_id),FOREIGN key(TS_id)REFERENCES train_status(TS_id) ,PRIMARY KEY(U_id,Train_id,TS_id));
+
+CREATE TABLE TrainRoute(Train_id int,R_id int,PRIMARY KEY(Train_id,R_id),FOREIGN KEY(Train_id)REFERENCES train(Train_id),FOREIGN KEY (R_id)REFERENCES route(R_id));
+
+CREATE TABLE TrainStation(Train_id int,S_id int,PRIMARY KEY(Train_id,S_id),D_time time,A_time time,FOREIGN KEY(Train_id)REFERENCES train(Train_id),FOREIGN KEY(S_id)REFERENCES station(S_id));
+
+CREATE TABLE routeStation(R_id int,S_id int,PRIMARY KEY(R_id,S_id),FOREIGN KEY(R_id)REFERENCES route(R_id),FOREIGN KEY (S_id)REFERENCES station(S_id));
+ALTER TABLE reserve add FOREIGN key(T_id)REFERENCES ticket(T_id);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,184 @@
+INSERT INTO `users`(`U_id`, `CNIC`, `Name`, `Email`, `Gender`, `Age`) VALUES (12,33104,"ALi","mn63159@gmail.com","Male",12);
+INSERT INTO `users`(`U_id`, `CNIC`, `Name`, `Email`, `Gender`, `Age`) VALUES (13,33105,"ALi Ahmad ","mn4631@gmail.com","Male",18);
+INSERT INTO `users`(`U_id`, `CNIC`, `Name`, `Email`, `Gender`, `Age`) VALUES (14,33104,"Hamad","hamad@gmail.com","Male",10);
+INSERT INTO `users`(`U_id`, `CNIC`, `Name`, `Email`, `Gender`, `Age`) VALUES (15,3310433333,"Abdullah","ab@gmail.com","Male",33);
+INSERT INTO `users`(`U_id`, `CNIC`, `Name`, `Email`, `Gender`, `Age`) VALUES (16,3310422222,"Hassnain","hasss@gmail.com","Male",44);
+INSERT INTO `users`(`U_id`, `CNIC`, `Name`, `Email`, `Gender`, `Age`) VALUES (17,331045555,"Mujtaba","mm@gmail.com","Male",16);
+INSERT INTO `users`(`U_id`, `CNIC`, `Name`, `Email`, `Gender`, `Age`) VALUES (18,331046666,"Naeem","Na@gmail.com","Male",17);
+INSERT INTO `users`(`U_id`, `CNIC`, `Name`, `Email`, `Gender`, `Age`) VALUES (19,3310486666,"ALi Ahmad","Ahmad@gamail.com","Male",45);
+INSERT INTO `users`(`U_id`, `CNIC`, `Name`, `Email`, `Gender`, `Age`) VALUES (20,331047777,"ALi Ali","Ali@gmail.com","Male",60);
+INSERT INTO `users`(`U_id`, `CNIC`, `Name`, `Email`, `Gender`, `Age`) VALUES (21,33104745734,"ALi Raza","raza@gmail.com","Male",66);
+
+
+
+INSERT INTO `train`(`Train_id`, `Name`) VALUES (120,"Express");
+INSERT INTO `train`(`Train_id`, `Name`) VALUES (121,"Awami");
+INSERT INTO `train`(`Train_id`, `Name`) VALUES (122,"SirSyed");
+INSERT INTO `train`(`Train_id`, `Name`) VALUES (123,"Express");
+INSERT INTO `train`(`Train_id`, `Name`) VALUES (124,"Awami");
+INSERT INTO `train`(`Train_id`, `Name`) VALUES (125,"SirSyed");
+INSERT INTO `train`(`Train_id`, `Name`) VALUES (126,"Express");
+INSERT INTO `train`(`Train_id`, `Name`) VALUES (127,"Awami");
+INSERT INTO `train`(`Train_id`, `Name`) VALUES (128,"SirSyed");
+INSERT INTO `train`(`Train_id`, `Name`) VALUES (129,"SirSyed");
+
+
+
+INSERT INTO `route`(`R_id`, `Name`, `Distance`) VALUES (110,"RAW",245);
+INSERT INTO `route`(`R_id`, `Name`, `Distance`) VALUES (111,"FSD",245);
+INSERT INTO `route`(`R_id`, `Name`, `Distance`) VALUES (112,"GUJ",890);
+INSERT INTO `route`(`R_id`, `Name`, `Distance`) VALUES (113,"FSD",255);
+INSERT INTO `route`(`R_id`, `Name`, `Distance`) VALUES (114,"JUR",450);
+INSERT INTO `route`(`R_id`, `Name`, `Distance`) VALUES (115,"MUL",660);
+INSERT INTO `route`(`R_id`, `Name`, `Distance`) VALUES (116,"KAR",770);
+INSERT INTO `route`(`R_id`, `Name`, `Distance`) VALUES (117,"SUR",790);
+INSERT INTO `route`(`R_id`, `Name`, `Distance`) VALUES (118,"PSW",111);
+INSERT INTO `route`(`R_id`, `Name`, `Distance`) VALUES (119,"FSD",240);
+
+
+INSERT INTO `station`(`S_id`, `Name`, `City`) VALUES (11,"FSD","FSD");
+INSERT INTO `station`(`S_id`, `Name`, `City`) VALUES (12,"KAR","Karachi");
+INSERT INTO `station`(`S_id`, `Name`, `City`) VALUES (13,"MUL","Multan");
+INSERT INTO `station`(`S_id`, `Name`, `City`) VALUES (14,"KAR","KAR");
+INSERT INTO `station`(`S_id`, `Name`, `City`) VALUES (15,"FSD","FSD");
+INSERT INTO `station`(`S_id`, `Name`, `City`) VALUES (16,"FSD","FSD");
+INSERT INTO `station`(`S_id`, `Name`, `City`) VALUES (17,"GWR","GWR");
+INSERT INTO `station`(`S_id`, `Name`, `City`) VALUES (18,"KAR","KAR");
+INSERT INTO `station`(`S_id`, `Name`, `City`) VALUES (19,"GWR","GWR");
+INSERT INTO `station`(`S_id`, `Name`, `City`) VALUES (20,"KAR","KAR");
+
+
+INSERT INTO `routestation`(`R_id`, `S_id`) VALUES (111,11);
+INSERT INTO `routestation`(`R_id`, `S_id`) VALUES (112,12);
+INSERT INTO `routestation`(`R_id`, `S_id`) VALUES (114,18);
+INSERT INTO `routestation`(`R_id`, `S_id`) VALUES (111,12);
+INSERT INTO `routestation`(`R_id`, `S_id`) VALUES (118,14);
+INSERT INTO `routestation`(`R_id`, `S_id`) VALUES (110,19);
+INSERT INTO `routestation`(`R_id`, `S_id`) VALUES (119,16);
+INSERT INTO `routestation`(`R_id`, `S_id`) VALUES (115,12);
+INSERT INTO `routestation`(`R_id`, `S_id`) VALUES (115,13);
+INSERT INTO `routestation`(`R_id`, `S_id`) VALUES (116,16);
+
+INSERT INTO `payment`(`Pay_id`, `Source`, `U_id`) VALUES (1320,"Bank",12);
+INSERT INTO `payment`(`Pay_id`, `Source`, `U_id`) VALUES (1321,"Jazz",14);
+INSERT INTO `payment`(`Pay_id`, `Source`, `U_id`) VALUES (1326,"Jazz",19);
+INSERT INTO `payment`(`Pay_id`, `Source`, `U_id`) VALUES (1324,"Bank",21);
+INSERT INTO `payment`(`Pay_id`, `Source`, `U_id`) VALUES (1323,"Bank",16);
+INSERT INTO `payment`(`Pay_id`, `Source`, `U_id`) VALUES (1322,"Easy",15);
+INSERT INTO `payment`(`Pay_id`, `Source`, `U_id`) VALUES (1328,"Bank",12);
+INSERT INTO `payment`(`Pay_id`, `Source`, `U_id`) VALUES (1327,"Jazz",18);
+INSERT INTO `payment`(`Pay_id`, `Source`, `U_id`) VALUES (1325,"Bank",13);
+INSERT INTO `payment`(`Pay_id`, `Source`, `U_id`) VALUES (1329,"Bank",12);
+
+
+INSERT INTO `train_status`(`TS_id`, `Train_id`, `Avail`, `Booked`, `Waited`) VALUES (110,120,34,122,15);
+INSERT INTO `train_status`(`TS_id`, `Train_id`, `Avail`, `Booked`, `Waited`) VALUES (111,121,32,120,18);
+INSERT INTO `train_status`(`TS_id`, `Train_id`, `Avail`, `Booked`, `Waited`) VALUES (112,120,3,125,15);
+INSERT INTO `train_status`(`TS_id`, `Train_id`, `Avail`, `Booked`, `Waited`) VALUES (113,126,68,120,18);
+INSERT INTO `train_status`(`TS_id`, `Train_id`, `Avail`, `Booked`, `Waited`) VALUES (114,127,36,122,10);
+INSERT INTO `train_status`(`TS_id`, `Train_id`, `Avail`, `Booked`, `Waited`) VALUES (115,129,42,120,15);
+INSERT INTO `train_status`(`TS_id`, `Train_id`, `Avail`, `Booked`, `Waited`) VALUES (116,120,54,122,13);
+INSERT INTO `train_status`(`TS_id`, `Train_id`, `Avail`, `Booked`, `Waited`) VALUES (117,125,62,120,19);
+INSERT INTO `train_status`(`TS_id`, `Train_id`, `Avail`, `Booked`, `Waited`) VALUES (118,128,74,122,18);
+INSERT INTO `train_status`(`TS_id`, `Train_id`, `Avail`, `Booked`, `Waited`) VALUES (119,123,92,120,17);
+
+
+INSERT INTO `user_t_status`(`Train_id`, `U_id`, `TS_id`) VALUES (120,13,110);
+INSERT INTO `user_t_status`(`Train_id`, `U_id`, `TS_id`) VALUES (123,12,111);
+INSERT INTO `user_t_status`(`Train_id`, `U_id`, `TS_id`) VALUES (127,14,113);
+INSERT INTO `user_t_status`(`Train_id`, `U_id`, `TS_id`) VALUES (123,13,115);
+INSERT INTO `user_t_status`(`Train_id`, `U_id`, `TS_id`) VALUES (124,15,110);
+INSERT INTO `user_t_status`(`Train_id`, `U_id`, `TS_id`) VALUES (126,13,118);
+INSERT INTO `user_t_status`(`Train_id`, `U_id`, `TS_id`) VALUES (128,19,116);
+INSERT INTO `user_t_status`(`Train_id`, `U_id`, `TS_id`) VALUES (127,21,113);
+INSERT INTO `user_t_status`(`Train_id`, `U_id`, `TS_id`) VALUES (122,13,112);
+INSERT INTO `user_t_status`(`Train_id`, `U_id`, `TS_id`) VALUES (128,16,119);
+
+
+
+INSERT INTO `coach`(`C_id`, `Class`, `Train_id`) VALUES (101,"A",123);
+INSERT INTO `coach`(`C_id`, `Class`, `Train_id`) VALUES (102,"B",120);
+INSERT INTO `coach`(`C_id`, `Class`, `Train_id`) VALUES (103,"B",128);
+INSERT INTO `coach`(`C_id`, `Class`, `Train_id`) VALUES (104,"A",125);
+INSERT INTO `coach`(`C_id`, `Class`, `Train_id`) VALUES (105,"C",120);
+INSERT INTO `coach`(`C_id`, `Class`, `Train_id`) VALUES (106,"C",125);
+INSERT INTO `coach`(`C_id`, `Class`, `Train_id`) VALUES (107,"A",127);
+INSERT INTO `coach`(`C_id`, `Class`, `Train_id`) VALUES (108,"C",129);
+INSERT INTO `coach`(`C_id`, `Class`, `Train_id`) VALUES (109,"B",122);
+INSERT INTO `coach`(`C_id`, `Class`, `Train_id`) VALUES (100,"A",124);
+
+
+
+INSERT INTO `seat`(`S_no`, `Status`, `Price`, `C_id`) VALUES(1,"Single",450,101);
+INSERT INTO `seat`(`S_no`, `Status`, `Price`, `C_id`) VALUES(2,"Single",450,101);
+INSERT INTO `seat`(`S_no`, `Status`, `Price`, `C_id`) VALUES(3,"Berth",950,103);
+INSERT INTO `seat`(`S_no`, `Status`, `Price`, `C_id`) VALUES(6,"Single",150,104);
+INSERT INTO `seat`(`S_no`, `Status`, `Price`, `C_id`) VALUES(5,"Berth",350,105);
+INSERT INTO `seat`(`S_no`, `Status`, `Price`, `C_id`) VALUES(4,"Berth",250,103);
+INSERT INTO `seat`(`S_no`, `Status`, `Price`, `C_id`) VALUES(7,"Single",350,101);
+INSERT INTO `seat`(`S_no`, `Status`, `Price`, `C_id`) VALUES(8,"Berth",150,106);
+INSERT INTO `seat`(`S_no`, `Status`, `Price`, `C_id`) VALUES(9,"Berth",350,103);
+INSERT INTO `seat`(`S_no`, `Status`, `Price`, `C_id`) VALUES(10,"Single",250,109);
+
+
+INSERT INTO `ticket`(`T_id`, `Type`, `U_id`, `Pay_id`, `C_id`) VALUES (300,"A",13,1320,101);
+INSERT INTO `ticket`(`T_id`, `Type`, `U_id`, `Pay_id`, `C_id`) VALUES (301,"B",12,1321,102);
+INSERT INTO `ticket`(`T_id`, `Type`, `U_id`, `Pay_id`, `C_id`) VALUES (302,"C",13,1320,101);
+INSERT INTO `ticket`(`T_id`, `Type`, `U_id`, `Pay_id`, `C_id`) VALUES (303,"B",14,1322,106);
+INSERT INTO `ticket`(`T_id`, `Type`, `U_id`, `Pay_id`, `C_id`) VALUES (304,"C",16,1324,105);
+INSERT INTO `ticket`(`T_id`, `Type`, `U_id`, `Pay_id`, `C_id`) VALUES (305,"B",19,1326,103);
+INSERT INTO `ticket`(`T_id`, `Type`, `U_id`, `Pay_id`, `C_id`) VALUES (306,"A",21,1327,104);
+INSERT INTO `ticket`(`T_id`, `Type`, `U_id`, `Pay_id`, `C_id`) VALUES (307,"C",15,1323,109);
+INSERT INTO `ticket`(`T_id`, `Type`, `U_id`, `Pay_id`, `C_id`) VALUES (308,"B",15,1323,109);
+INSERT INTO `ticket`(`T_id`, `Type`, `U_id`, `Pay_id`, `C_id`) VALUES (309,"C",13,1320,101);
+
+
+INSERT INTO `trainroute`(`Train_id`, `R_id`) VALUES (120,111);
+INSERT INTO `trainroute`(`Train_id`, `R_id`) VALUES (121,112);
+INSERT INTO `trainroute`(`Train_id`, `R_id`) VALUES (125,113);
+INSERT INTO `trainroute`(`Train_id`, `R_id`) VALUES (129,115);
+INSERT INTO `trainroute`(`Train_id`, `R_id`) VALUES (125,117);
+INSERT INTO `trainroute`(`Train_id`, `R_id`) VALUES (123,119);
+INSERT INTO `trainroute`(`Train_id`, `R_id`) VALUES (126,118);
+INSERT INTO `trainroute`(`Train_id`, `R_id`) VALUES (128,114);
+INSERT INTO `trainroute`(`Train_id`, `R_id`) VALUES (126,113);
+INSERT INTO `trainroute`(`Train_id`, `R_id`) VALUES (128,115);
+
+INSERT INTO `trainstation`(`Train_id`, `S_id`, `D_time`, `A_time`) VALUES (121,11,033030,023030);
+INSERT INTO `trainstation`(`Train_id`, `S_id`, `D_time`, `A_time`) VALUES (122,12,033030,023030);
+INSERT INTO `trainstation`(`Train_id`, `S_id`, `D_time`, `A_time`) VALUES (123,15,021530,013030);
+INSERT INTO `trainstation`(`Train_id`, `S_id`, `D_time`, `A_time`) VALUES (126,16,123030,113030);
+INSERT INTO `trainstation`(`Train_id`, `S_id`, `D_time`, `A_time`) VALUES (124,14,013030,123030);
+INSERT INTO `trainstation`(`Train_id`, `S_id`, `D_time`, `A_time`) VALUES (127,17,033030,023030);
+INSERT INTO `trainstation`(`Train_id`, `S_id`, `D_time`, `A_time`) VALUES (128,18,053030,043030);
+INSERT INTO `trainstation`(`Train_id`, `S_id`, `D_time`, `A_time`) VALUES (129,12,073030,063030);
+INSERT INTO `trainstation`(`Train_id`, `S_id`, `D_time`, `A_time`) VALUES (125,16,093030,083030);
+INSERT INTO `trainstation`(`Train_id`, `S_id`, `D_time`, `A_time`) VALUES (120,12,033030,023030);
+
+
+
+INSERT INTO `passenger`(`P_id`, `CNIC`, `Name`, `Gender`, `Age`) VALUES (500,331053299450,"Rahmat","Male",34);
+INSERT INTO `passenger`(`P_id`, `CNIC`, `Name`, `Gender`, `Age`) VALUES (501,331053299472,"Ali","Male",30);
+INSERT INTO `passenger`(`P_id`, `CNIC`, `Name`, `Gender`, `Age`) VALUES (502,331053295632,"AHmad","Male",40);
+INSERT INTO `passenger`(`P_id`, `CNIC`, `Name`, `Gender`, `Age`) VALUES (503,331053277432,"Aga","Male",45);
+INSERT INTO `passenger`(`P_id`, `CNIC`, `Name`, `Gender`, `Age`) VALUES (504,3310536699432,"Shan","Male",14);
+INSERT INTO `passenger`(`P_id`, `CNIC`, `Name`, `Gender`, `Age`) VALUES (505,331053399432,"Ali","Male",24);
+INSERT INTO `passenger`(`P_id`, `CNIC`, `Name`, `Gender`, `Age`) VALUES (506,331055299432,"Rahmat","Male",64);
+INSERT INTO `passenger`(`P_id`, `CNIC`, `Name`, `Gender`, `Age`) VALUES (507,331045299432,"Rahmat Ali","Male",44);
+INSERT INTO `passenger`(`P_id`, `CNIC`, `Name`, `Gender`, `Age`) VALUES (508,332333299432,"Raza","Male",47);
+INSERT INTO `passenger`(`P_id`, `CNIC`, `Name`, `Gender`, `Age`) VALUES (509,33567299432,"Naeem","Male",34);
+
+
+
+
+INSERT INTO `reserve`(`R_id`, `U_id`, `P_id`, `T_Id`, `S_no`, `Date`, `Time`) VALUES (1000,12,500,300,8,"2019-5-5","12:30:23");
+INSERT INTO `reserve`(`R_id`, `U_id`, `P_id`, `T_Id`, `S_no`, `Date`, `Time`) VALUES (1001,12,502,302,2,"2019-5-5","11:30:23");
+INSERT INTO `reserve`(`R_id`, `U_id`, `P_id`, `T_Id`, `S_no`, `Date`, `Time`) VALUES (1002,13,503,301,1,"2019-6-5","12:35:23");
+INSERT INTO `reserve`(`R_id`, `U_id`, `P_id`, `T_Id`, `S_no`, `Date`, `Time`) VALUES (1003,15,501,304,3,"2019-5-5","12:37:23");
+INSERT INTO `reserve`(`R_id`, `U_id`, `P_id`, `T_Id`, `S_no`, `Date`, `Time`) VALUES (1009,16,502,305,4,"2019-7-5","12:39:23");
+INSERT INTO `reserve`(`R_id`, `U_id`, `P_id`, `T_Id`, `S_no`, `Date`, `Time`) VALUES (1004,17,505,306,5,"2019-5-5","12:50:23");
+INSERT INTO `reserve`(`R_id`, `U_id`, `P_id`, `T_Id`, `S_no`, `Date`, `Time`) VALUES (1005,13,506,307,7,"2019-5-5","12:55:23");
+INSERT INTO `reserve`(`R_id`, `U_id`, `P_id`, `T_Id`, `S_no`, `Date`, `Time`) VALUES (1006,16,507,308,6,"2019-6-5","12:25:23");
+INSERT INTO `reserve`(`R_id`, `U_id`, `P_id`, `T_Id`, `S_no`, `Date`, `Time`) VALUES (1007,17,508,309,9,"2019-5-5","12:34:23");
+INSERT INTO `reserve`(`R_id`, `U_id`, `P_id`, `T_Id`, `S_no`, `Date`, `Time`) VALUES (1008,19,509,303,10,"2019-5-5","12:44:23");
+
